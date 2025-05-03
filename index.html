@@ -666,18 +666,25 @@
                         <div class="md:flex">
                             <div class="md:w-1/2 p-8">
                                 <h2 class="text-2xl font-semibold mb-6">Get in Touch</h2>
-                                <form id="contact-form" action="send-email.php" method="POST" class="space-y-4">
+                                <form id="contact-form" action="/send-email.php" method="POST" class="space-y-6 max-w-lg mx-auto bg-white p-6 rounded-xl shadow-md">
+                                    <h2 class="text-2xl font-semibold text-gray-800 mb-4">Contact Us</h2>
+                                
                                     <div>
-                                        <label for="name" class="block text-gray-700 mb-2">Name</label>
-                                        <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                                        <label for="name" class="block text-gray-700 mb-1">Name</label>
+                                        <input type="text" id="name" name="name" required
+                                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
                                     </div>
+                                
                                     <div>
-                                        <label for="email" class="block text-gray-700 mb-2">Email</label>
-                                        <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                                        <label for="email" class="block text-gray-700 mb-1">Email</label>
+                                        <input type="email" id="email" name="email" required
+                                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
                                     </div>
+                                
                                     <div>
-                                        <label for="subject" class="block text-gray-700 mb-2">Subject</label>
-                                        <select id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                                        <label for="subject" class="block text-gray-700 mb-1">Subject</label>
+                                        <select id="subject" name="subject" required
+                                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
                                             <option value="ERP Development">ERP Development</option>
                                             <option value="Website Development">Website Development</option>
                                             <option value="Mobile App Development">Mobile App Development</option>
@@ -685,12 +692,19 @@
                                             <option value="Other">Other</option>
                                         </select>
                                     </div>
+                                
                                     <div>
-                                        <label for="message" class="block text-gray-700 mb-2">Message</label>
-                                        <textarea id="message" name="message" rows="4" required class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
+                                        <label for="message" class="block text-gray-700 mb-1">Message</label>
+                                        <textarea id="message" name="message" rows="4" required
+                                            class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500"></textarea>
                                     </div>
-                                    <button type="submit" class="btn-primary px-6 py-3 rounded-md font-medium w-full">Send Message</button>
+                                
+                                    <button type="submit"
+                                        class="w-full bg-green-600 text-white py-3 rounded-md font-semibold hover:bg-green-700 transition duration-200">
+                                        Send Message
+                                    </button>
                                 </form>                                
+                                                                
                             </div>
                             <div class="md:w-1/2 bg-primary p-8 text-white">
                                 <h2 class="text-2xl font-semibold mb-6">Contact Information</h2>
@@ -925,23 +939,48 @@
         });
         
         // Contact form submission
-        const contactForm = document.getElementById('contact-form');
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
+
+       
+    const contactForm = document.getElementById('contact-form');
+    contactForm.addEventListener('submit', async (e) => {
+        e.preventDefault(); // Stop normal form submission
+
+        const formData = new FormData(contactForm);
+
+        try {
+            const response = await fetch('/send-email.php', {
+                method: 'POST',
+                body: formData
+            });
+
+            const result = await response.text();
+
+            alert(result); // Show the PHP response ("Email sent successfully!" or error)
+
+            contactForm.reset(); // Clear the form
+        } catch (error) {
+            alert("There was an error sending your message.");
+        }
+    });
+
+
+        // const contactForm = document.getElementById('contact-form');
+        // contactForm.addEventListener('submit', (e) => {
+        //     e.preventDefault();
             
-            // Get form values
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
+        //     // Get form values
+        //     const name = document.getElementById('name').value;
+        //     const email = document.getElementById('email').value;
+        //     const subject = document.getElementById('subject').value;
+        //     const message = document.getElementById('message').value;
             
-            // In a real application, you would send this data to your server
-            // For demo purposes, we'll just show an alert
-            alert(`Thank you, ${name}! Your message has been received. We'll get back to you soon.`);
+        //     // In a real application, you would send this data to your server
+        //     // For demo purposes, we'll just show an alert
+        //     alert(`Thank you, ${name}! Your message has been received. We'll get back to you soon.`);
             
-            // Reset form
-            contactForm.reset();
-        });
+        //     // Reset form
+        //     contactForm.reset();
+        // });
     </script>
 <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'939f0274867ea73a',t:'MTc0NjI2NzQ1Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: medium; visibility: hidden;"></iframe>
 </body></html>
