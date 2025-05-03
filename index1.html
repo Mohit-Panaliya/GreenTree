@@ -1,0 +1,1009 @@
+<html lang="en"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GreenTree - Custom ERP &amp; Software Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        body {
+      margin: 0;
+      background: #E6F4EA;
+      overflow-x: hidden;
+    }
+
+    .leaf-container {
+      position: absolute;
+      top: -50px;
+      animation: fall linear infinite;
+    }
+
+    .leaf-inner {
+      animation: sway ease-in-out infinite alternate;
+    }
+
+    .leaf {
+      font-size: 24px;
+      animation: spin linear infinite;
+      display: inline-block;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(130vh); }
+    }
+
+    @keyframes sway {
+      0% { transform: translateX(0px); }
+      50% { transform: translateX(20px); }
+      100% { transform: translateX(-20px); }
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .bg-primary {
+            background-color: #2E7D32;
+        }
+        
+        .text-primary {
+            color: #2E7D32;
+        }
+        
+        .btn-primary {
+            background-color: #2E7D32;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #1B5E20;
+        }
+        
+        .btn-outline {
+            border: 2px solid #2E7D32;
+            color: #2E7D32;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline:hover {
+            background-color: #2E7D32;
+            color: white;
+        }
+        
+        .service-card {
+            transition: all 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .page {
+            display: none;
+        }
+        
+        .active {
+            display: block;
+        }
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.16 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width: 640px){.container{max-width:640px}}@media (min-width: 768px){.container{max-width:768px}}@media (min-width: 1024px){.container{max-width:1024px}}@media (min-width: 1280px){.container{max-width:1280px}}@media (min-width: 1536px){.container{max-width:1536px}}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.inset-0{inset:0px}.top-0{top:0px}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-12{margin-bottom:3rem}.mb-2{margin-bottom:0.5rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-2{margin-left:0.5rem}.mr-2{margin-right:0.5rem}.mr-4{margin-right:1rem}.mt-1{margin-top:0.25rem}.mt-12{margin-top:3rem}.mt-4{margin-top:1rem}.mt-8{margin-top:2rem}.block{display:block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-48{height:12rem}.h-5{height:1.25rem}.h-6{height:1.5rem}.h-64{height:16rem}.h-8{height:2rem}.h-full{height:100%}.w-5{width:1.25rem}.w-6{width:1.5rem}.w-8{width:2rem}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-3xl{max-width:48rem}.max-w-5xl{max-width:64rem}.max-w-md{max-width:28rem}.list-inside{list-style-position:inside}.list-disc{list-style-type:disc}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:0.5rem}.gap-8{gap:2rem}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-md{border-radius:0.375rem}.border{border-width:1px}.border-t{border-top-width:1px}.border-gray-100{--tw-border-opacity:1;border-color:rgb(243 244 246 / var(--tw-border-opacity, 1))}.border-gray-300{--tw-border-opacity:1;border-color:rgb(209 213 219 / var(--tw-border-opacity, 1))}.border-gray-700{--tw-border-opacity:1;border-color:rgb(55 65 81 / var(--tw-border-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-gray-200{--tw-bg-opacity:1;background-color:rgb(229 231 235 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}.bg-green-50{--tw-bg-opacity:1;background-color:rgb(240 253 244 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-gradient-to-r{background-image:linear-gradient(to right, var(--tw-gradient-stops))}.from-green-50{--tw-gradient-from:#f0fdf4 var(--tw-gradient-from-position);--tw-gradient-to:rgb(240 253 244 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.to-green-100{--tw-gradient-to:#dcfce7 var(--tw-gradient-to-position)}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-3{padding-left:0.75rem;padding-right:0.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-12{padding-top:3rem;padding-bottom:3rem}.py-16{padding-top:4rem;padding-bottom:4rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.pt-8{padding-top:2rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-5xl{font-size:3rem;line-height:1}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.italic{font-style:italic}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-green-400{--tw-text-opacity:1;color:rgb(74 222 128 / var(--tw-text-opacity, 1))}.text-green-500{--tw-text-opacity:1;color:rgb(34 197 94 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.hover\:text-green-200:hover{--tw-text-opacity:1;color:rgb(187 247 208 / var(--tw-text-opacity, 1))}.hover\:text-white:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.focus\:ring-2:focus{--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000)}.focus\:ring-green-500:focus{--tw-ring-opacity:1;--tw-ring-color:rgb(34 197 94 / var(--tw-ring-opacity, 1))}@media (min-width: 768px){.md\:mb-0{margin-bottom:0px}.md\:mr-6{margin-right:1.5rem}.md\:flex{display:flex}.md\:hidden{display:none}.md\:w-1\/2{width:50%}.md\:w-1\/3{width:33.333333%}.md\:w-2\/3{width:66.666667%}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:py-24{padding-top:6rem;padding-bottom:6rem}.md\:text-5xl{font-size:3rem;line-height:1}}@media (min-width: 1024px){.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}}</style></head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <!-- <svg class="h-8 w-8 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"></path>
+                    </svg> -->
+                    <img src="LOGO.png" class="h-10" alt="">
+                    <!-- <span class="ml-2 text-xl font-bold text-gray-800">GreenTree</span> -->
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#" class="nav-link text-gray-700 hover:text-primary" data-page="home">Home</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-primary" data-page="about">About Us</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-primary" data-page="services">Services</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-primary" data-page="portfolio">Portfolio</a>
+                    <a href="#" class="nav-link text-gray-700 hover:text-primary" data-page="contact">Contact</a>
+                </div>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="mobile-menu" class="md:hidden hidden py-4">
+                <a href="#" class="nav-link block py-2 text-gray-700 hover:text-primary" data-page="home">Home</a>
+                <a href="#" class="nav-link block py-2 text-gray-700 hover:text-primary" data-page="about">About Us</a>
+                <a href="#" class="nav-link block py-2 text-gray-700 hover:text-primary" data-page="services">Services</a>
+                <a href="#" class="nav-link block py-2 text-gray-700 hover:text-primary" data-page="portfolio">Portfolio</a>
+                <a href="#" class="nav-link block py-2 text-gray-700 hover:text-primary" data-page="contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <!-- Hero Section -->
+        <div class="relative bg-gradient-to-r from-green-50 to-green-100">
+            <div class="container mx-auto px-4 py-16 md:py-24">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Powering Businesses with Custom ERP, Web &amp; Mobile Solutions</h1>
+                        <p class="text-lg text-gray-600 mb-6">We deliver powerful, scalable software tailored to your needs — specializing in ERPNext development, website and app design.</p>
+                        <button class="btn-primary px-6 py-3 rounded-md font-medium text-lg contact-btn">Contact Us</button>
+                    </div>
+                    <div class="md:w-1/2 flex justify-center">
+                        <img src="TREE_NoBG.png" class="h-50" alt="">
+                        <!-- <svg class="w-full max-w-md" viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M239.7,86.2c-28.6,0-51.8,23.2-51.8,51.8c0,17.3,8.5,32.6,21.6,42l-5.8,34.2l32.2-15.6c1.3,0.1,2.5,0.2,3.8,0.2
+                            c28.6,0,51.8-23.2,51.8-51.8C291.5,109.4,268.3,86.2,239.7,86.2z" fill="#2E7D32"></path>
+                            <path d="M370,190c0-66.3-53.7-120-120-120s-120,53.7-120,120c0,39.8,19.3,75.1,49.1,96.9l-8.6,50.9l47.8-23.1
+                            c10,2.8,20.5,4.3,31.7,4.3c66.3,0,120-53.7,120-120z" fill="none" stroke="#2E7D32" stroke-width="8"></path>
+                            <circle cx="250" cy="190" r="30" fill="#2E7D32"></circle>
+                            <circle cx="190" cy="190" r="30" fill="#2E7D32"></circle>
+                            <circle cx="310" cy="190" r="30" fill="#2E7D32"></circle>
+                            <path d="M130,260c20,20,40,30,70,30s50-10,70-30" fill="none" stroke="#2E7D32" stroke-width="8" stroke-linecap="round"></path>
+                            <rect x="150" y="300" width="200" height="40" rx="5" fill="#2E7D32"></rect>
+                            <rect x="170" y="320" width="160" height="10" rx="5" fill="white"></rect>
+                            <circle cx="150" cy="100" r="20" fill="#2E7D32"></circle>
+                            <circle cx="350" cy="100" r="20" fill="#2E7D32"></circle>
+                            <path d="M150,100 Q250,50 350,100" fill="none" stroke="#2E7D32" stroke-width="5"></path>
+                        </svg> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services Highlight -->
+        <div class="bg-white py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Our Key Services</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="service-card bg-white rounded-lg p-6 shadow-md border border-gray-100">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">ERP Development</h3>
+                        <p class="text-gray-600 mb-4">Custom ERPNext solutions to streamline your business operations.</p>
+                        <button class="services-btn btn-outline px-4 py-2 rounded-md text-sm font-medium">Learn More</button>
+                    </div>
+                    <div class="service-card bg-white rounded-lg p-6 shadow-md border border-gray-100">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Website Design</h3>
+                        <p class="text-gray-600 mb-4">Modern, responsive websites that represent your brand perfectly.</p>
+                        <button class="services-btn btn-outline px-4 py-2 rounded-md text-sm font-medium">Learn More</button>
+                    </div>
+                    <div class="service-card bg-white rounded-lg p-6 shadow-md border border-gray-100">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">App Development</h3>
+                        <p class="text-gray-600 mb-4">Native and hybrid mobile applications for Android and iOS.</p>
+                        <button class="services-btn btn-outline px-4 py-2 rounded-md text-sm font-medium">Learn More</button>
+                    </div>
+                    <div class="service-card bg-white rounded-lg p-6 shadow-md border border-gray-100">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Custom Software</h3>
+                        <p class="text-gray-600 mb-4">Tailored software solutions according to your specific requirements.</p>
+                        <button class="services-btn btn-outline px-4 py-2 rounded-md text-sm font-medium">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Why Choose Us -->
+        <div class="bg-gray-50 py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Why Choose Us</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Experience in ERP</h3>
+                        <p class="text-gray-600">Years of expertise in implementing and customizing ERPNext solutions.</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Fast &amp; Reliable Support</h3>
+                        <p class="text-gray-600">Quick response times and dependable assistance when you need it most.</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Client First Approach</h3>
+                        <p class="text-gray-600">Your needs and satisfaction are our top priority in every project.</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <div class="text-primary text-4xl mb-4">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Custom Solutions</h3>
+                        <p class="text-gray-600">Tailored development according to your specific business requirements.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Our Promise -->
+        <div class="bg-white py-16">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Our Promise</h2>
+                <div class="max-w-2xl mx-auto text-center">
+                    <div class="testimonial-card bg-green-50 rounded-lg p-8 shadow-sm">
+                        <div class="text-primary text-5xl mb-4">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <p class="text-xl text-gray-700 italic mb-4">"We promise to do our best to serve you, delivering quality solutions that exceed your expectations."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Us Page -->
+    <div id="about" class="page">
+        <div class="bg-gradient-to-r from-green-50 to-green-100 py-16">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl font-bold text-center text-gray-800 mb-8">About Us</h1>
+                <div class="max-w-3xl mx-auto">
+                    <h2 class="text-2xl font-semibold mb-4">Who We Are</h2>
+                    <p class="text-lg text-gray-700 mb-6">
+                        GreenTree is a software development firm specializing in delivering cutting-edge ERP solutions using Frappe ERPNext. Our team brings expertise in building, deploying, and maintaining scalable systems to help businesses grow. We also design and develop websites, mobile apps, and custom software tailored to your unique needs.
+                    </p>
+                    <div class="bg-white rounded-lg p-6 shadow-md mb-8">
+                        <h3 class="text-xl font-semibold text-primary mb-2">Our Mission</h3>
+                        <p class="text-gray-700">To empower businesses through innovative, reliable, and cost-effective technology solutions.</p>
+                    </div>
+                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                        <div class="bg-white rounded-lg p-6 shadow-md">
+                            <div class="text-primary text-4xl mb-4">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Our Vision</h3>
+                            <p class="text-gray-600">To be the preferred technology partner for businesses seeking growth through digital transformation.</p>
+                        </div>
+                        <div class="bg-white rounded-lg p-6 shadow-md">
+                            <div class="text-primary text-4xl mb-4">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold mb-2">Our Values</h3>
+                            <p class="text-gray-600">Integrity, innovation, excellence, and client satisfaction guide everything we do.</p>
+                        </div>
+                    </div>
+                    
+                    <h2 class="text-2xl font-semibold mb-4">Our Approach</h2>
+                    <div class="bg-white rounded-lg p-6 shadow-md">
+                        <div class="flex flex-col md:flex-row items-center">
+                            <div class="md:w-1/3 mb-4 md:mb-0 md:mr-6">
+                                <svg class="w-full" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="100" cy="100" r="80" fill="#e8f5e9"></circle>
+                                    <path d="M100,30 L100,170" stroke="#2E7D32" stroke-width="4" stroke-dasharray="10,5"></path>
+                                    <circle cx="100" cy="60" r="15" fill="#2E7D32"></circle>
+                                    <text x="130" y="65" font-family="Arial" font-size="12" fill="#333">Discovery</text>
+                                    <circle cx="100" cy="100" r="15" fill="#2E7D32"></circle>
+                                    <text x="130" y="105" font-family="Arial" font-size="12" fill="#333">Development</text>
+                                    <circle cx="100" cy="140" r="15" fill="#2E7D32"></circle>
+                                    <text x="130" y="145" font-family="Arial" font-size="12" fill="#333">Delivery</text>
+                                </svg>
+                            </div>
+                            <div class="md:w-2/3">
+                                <p class="text-gray-700 mb-4">
+                                    At GreenTree, we follow a collaborative approach to ensure your project's success. We begin by understanding your business needs, develop solutions that address those needs, and provide ongoing support after implementation.
+                                </p>
+                                <p class="text-gray-700">
+                                    Our team of experienced developers, designers, and project managers work together to deliver high-quality solutions on time and within budget.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Page -->
+    <div id="services" class="page">
+        <div class="bg-gradient-to-r from-green-50 to-green-100 py-16">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl font-bold text-center text-gray-800 mb-12">Our Services</h1>
+                
+                <!-- ERP Development -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden mb-12">
+                    <div class="md:flex">
+                        <div class="md:w-1/3 bg-primary p-8 text-white">
+                            <div class="text-5xl mb-4">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold mb-2">ERP Software Development</h2>
+                            <p class="mb-4">Comprehensive ERP solutions to streamline your business operations</p>
+                            <ul class="list-disc list-inside mb-6">
+                                <li>Custom ERP Solutions</li>
+                                <li>Deployment &amp; Implementation</li>
+                                <li>Maintenance &amp; Support</li>
+                            </ul>
+                            <button class="contact-btn bg-white text-primary px-6 py-2 rounded-md font-medium">Book Demo</button>
+                        </div>
+                        <div class="md:w-2/3 p-8">
+                            <h3 class="text-xl font-semibold mb-4">We design, customize, and deploy powerful ERP solutions using Frappe ERPNext for various industries.</h3>
+                            <p class="text-gray-600 mb-6">From manufacturing to healthcare, we tailor your ERP to match your needs.</p>
+                            
+                            <div class="mb-6">
+                                <h4 class="font-semibold text-gray-800 mb-2">Benefits:</h4>
+                                <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                    <li class="flex items-center">
+                                        <svg class="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        Streamlined operations
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        Increased productivity
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        Better decision making
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        Cost reduction
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Technologies:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Frappe</span>
+                                    <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">ERPNext</span>
+                                    <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Python</span>
+                                    <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                                    <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">MariaDB</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Website Design -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden mb-12">
+                    <div class="md:flex">
+                        <div class="md:w-1/3 bg-primary p-8 text-white">
+                            <div class="text-5xl mb-4">
+                                <i class="fas fa-laptop-code"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold mb-2">Website Design &amp; Development</h2>
+                            <p class="mb-4">Modern, responsive websites that represent your brand</p>
+                            <ul class="list-disc list-inside mb-6">
+                                <li>HTML, CSS, JS</li>
+                                <li>WordPress</li>
+                                <li>MERN (NextJS)</li>
+                            </ul>
+                            <button class="contact-btn bg-white text-primary px-6 py-2 rounded-md font-medium">Contact Us</button>
+                        </div>
+                        <div class="md:w-2/3 p-8">
+                            <h3 class="text-xl font-semibold mb-4">Modern, mobile-responsive, and SEO-friendly websites designed to capture your audience and grow your brand.</h3>
+                            <p class="text-gray-600 mb-6">We create websites that not only look great but also perform well and drive results for your business.</p>
+                            
+                            <div class="mb-6">
+                                <h4 class="font-semibold text-gray-800 mb-2">Benefits:</h4>
+                                <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                    <li class="flex items-center">
+                                        <svg class="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        Mobile-responsive design
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        SEO optimization
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        Fast loading times
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        User-friendly interface
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Technologies:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">HTML5</span>
+                                    <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">CSS3</span>
+                                    <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                                    <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">WordPress</span>
+                                    <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">React</span>
+                                    <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">NextJS</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile App Development -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden mb-12">
+                    <div class="md:flex">
+                        <div class="md:w-1/3 bg-primary p-8 text-white">
+                            <div class="text-5xl mb-4">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold mb-2">Mobile App Development</h2>
+                            <p class="mb-4">Native and hybrid mobile applications</p>
+                            <ul class="list-disc list-inside mb-6">
+                                <li>Android Native</li>
+                                <li>iOS Development</li>
+                                <li>Hybrid Applications</li>
+                            </ul>
+                            <button class="contact-btn bg-white text-primary px-6 py-2 rounded-md font-medium">Contact Us</button>
+                        </div>
+                        <div class="md:w-2/3 p-8">
+                            <h3 class="text-xl font-semibold mb-4">We develop sleek Android and iOS applications that help you stay connected with your customers on the go.</h3>
+                            <p class="text-gray-600 mb-6">Our mobile apps are designed with user experience in mind, ensuring high engagement and satisfaction.</p>
+                            
+                            <div class="mb-6">
+                                <h4 class="font-semibold text-gray-800 mb-2">Benefits:</h4>
+                                <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                    <li class="flex items-center">
+                                        <svg class="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        Enhanced customer engagement
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        Brand visibility
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        Direct marketing channel
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        Improved customer service
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Technologies:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Java</span>
+                                    <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Kotlin</span>
+                                    <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Swift</span>
+                                    <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">React Native</span>
+                                    <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Flutter</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Custom Software -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-1/3 bg-primary p-8 text-white">
+                            <div class="text-5xl mb-4">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h2 class="text-2xl font-bold mb-2">Custom Software Development</h2>
+                            <p class="mb-4">Tailored solutions for your unique business needs</p>
+                            <ul class="list-disc list-inside mb-6">
+                                <li>Requirement Analysis</li>
+                                <li>Custom Development</li>
+                                <li>Integration &amp; Support</li>
+                            </ul>
+                            <button class="contact-btn bg-white text-primary px-6 py-2 rounded-md font-medium">Contact Us</button>
+                        </div>
+                        <div class="md:w-2/3 p-8">
+                            <h3 class="text-xl font-semibold mb-4">Have a unique idea? We can turn it into a fully functioning software product.</h3>
+                            <p class="text-gray-600 mb-6">Our team works closely with you to understand your requirements and develop custom solutions that address your specific challenges.</p>
+                            
+                            <div class="mb-6">
+                                <h4 class="font-semibold text-gray-800 mb-2">Benefits:</h4>
+                                <ul class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                                    <li class="flex items-center">
+                                        <svg class="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        Tailored to your needs
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        Competitive advantage
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        Scalable solutions
+                                    </li>
+                                    <li class="flex items-center">
+                                        <svg class="h-5 w-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                                        </svg>
+                                        Long-term support
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div>
+                                <h4 class="font-semibold text-gray-800 mb-2">Technologies:</h4>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Python</span>
+                                    <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                                    <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Node.js</span>
+                                    <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">React</span>
+                                    <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">SQL/NoSQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Page -->
+    <div id="portfolio" class="page">
+        <div class="bg-gradient-to-r from-green-50 to-green-100 py-16">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl font-bold text-center text-gray-800 mb-12">Our Portfolio</h1>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Project 1 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="relative h-48 bg-gray-200">
+                            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="200" fill="#e8f5e9"></rect>
+                                <rect x="50" y="30" width="300" height="40" rx="5" fill="#2E7D32"></rect>
+                                <rect x="50" y="80" width="140" height="90" rx="5" fill="#2E7D32" opacity="0.8"></rect>
+                                <rect x="210" y="80" width="140" height="40" rx="5" fill="#2E7D32" opacity="0.6"></rect>
+                                <rect x="210" y="130" width="140" height="40" rx="5" fill="#2E7D32" opacity="0.6"></rect>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-white text-xl font-bold">ERP for Retail</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Retail ERP System</h3>
+                            <p class="text-gray-600 mb-4">A comprehensive ERP solution for retail businesses, including inventory management, POS integration, and sales analytics.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">ERPNext</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Python</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                            </div>
+                            <button class="contact-btn btn-primary px-4 py-2 rounded-md text-sm font-medium w-full">Book Demo</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 2 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="relative h-48 bg-gray-200">
+                            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="200" fill="#e8f5e9"></rect>
+                                <rect x="20" y="20" width="360" height="60" rx="5" fill="#2E7D32"></rect>
+                                <circle cx="50" cy="50" r="20" fill="white"></circle>
+                                <rect x="20" y="100" width="360" height="80" rx="5" fill="#2E7D32" opacity="0.7"></rect>
+                                <rect x="40" y="120" width="320" height="40" rx="5" fill="white" opacity="0.6"></rect>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-white text-xl font-bold">Restaurant Website</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Fine Dining Website</h3>
+                            <p class="text-gray-600 mb-4">A modern, responsive website for a high-end restaurant, featuring online reservations, menu display, and customer reviews.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">WordPress</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">HTML5</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">CSS3</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">JavaScript</span>
+                            </div>
+                            <button class="contact-btn btn-primary px-4 py-2 rounded-md text-sm font-medium w-full">View Demo</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Project 3 -->
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="relative h-48 bg-gray-200">
+                            <svg class="absolute inset-0 w-full h-full" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="400" height="200" fill="#e8f5e9"></rect>
+                                <rect x="125" y="20" width="150" height="160" rx="10" fill="#2E7D32"></rect>
+                                <rect x="140" y="40" width="120" height="100" rx="5" fill="white"></rect>
+                                <circle cx="200" cy="160" r="10" fill="white"></circle>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <span class="text-white text-xl font-bold">Mobile App</span>
+                            </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Delivery Tracking App</h3>
+                            <p class="text-gray-600 mb-4">A mobile application for tracking deliveries in real-time, with driver management and customer notifications.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">React Native</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Firebase</span>
+                                <span class="bg-gray-100 text-gray-800 px-3 py-1 rounded-full text-sm">Google Maps API</span>
+                            </div>
+                            <button class="contact-btn btn-primary px-4 py-2 rounded-md text-sm font-medium w-full">View Demo</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="mt-12 text-center">
+                    <p class="text-lg text-gray-700 mb-6">Interested in seeing how our solutions can work for your business?</p>
+                    <button class="contact-btn btn-primary px-6 py-3 rounded-md font-medium text-lg">Book a Demo</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <div class="bg-gradient-to-r from-green-50 to-green-100 py-16">
+            <div class="container mx-auto px-4">
+                <h1 class="text-4xl font-bold text-center text-gray-800 mb-12">Contact Us</h1>
+                
+                <div class="max-w-5xl mx-auto">
+                    <div class="bg-white rounded-lg shadow-md overflow-hidden">
+                        <div class="md:flex">
+                            <div class="md:w-1/2 p-8">
+                                <h2 class="text-2xl font-semibold mb-6">Get in Touch</h2>
+                                <form id="contact-form" class="space-y-4">
+                                    <div>
+                                        <label for="name" class="block text-gray-700 mb-2">Name</label>
+                                        <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" required="">
+                                    </div>
+                                    <div>
+                                        <label for="email" class="block text-gray-700 mb-2">Email</label>
+                                        <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" required="">
+                                    </div>
+                                    <div>
+                                        <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                                        <select id="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500">
+                                            <option value="erp">ERP Development</option>
+                                            <option value="web">Website Development</option>
+                                            <option value="app">Mobile App Development</option>
+                                            <option value="custom">Custom Software</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="message" class="block text-gray-700 mb-2">Message</label>
+                                        <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500" required=""></textarea>
+                                    </div>
+                                    <button type="submit" class="btn-primary px-6 py-3 rounded-md font-medium w-full">Send Message</button>
+                                </form>
+                            </div>
+                            <div class="md:w-1/2 bg-primary p-8 text-white">
+                                <h2 class="text-2xl font-semibold mb-6">Contact Information</h2>
+                                <div class="space-y-4">
+                                    <div class="flex items-start">
+                                        <div class="text-2xl mr-4">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold">Address</h3>
+                                            <p>V.V.Nagar, Anand</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="text-2xl mr-4">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold">Email</h3>
+                                            <p>info@greentree.com</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-start">
+                                        <div class="text-2xl mr-4">
+                                            <i class="fas fa-phone"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="font-semibold">Phone</h3>
+                                            <p>+91 98765 43210</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-8">
+                                    <h3 class="font-semibold mb-4">Connect With Us</h3>
+                                    <div class="flex space-x-4">
+                                        <a href="#" class="text-white hover:text-green-200 text-2xl">
+                                            <i class="fab fa-facebook"></i>
+                                        </a>
+                                        <a href="#" class="text-white hover:text-green-200 text-2xl">
+                                            <i class="fab fa-twitter"></i>
+                                        </a>
+                                        <a href="#" class="text-white hover:text-green-200 text-2xl">
+                                            <i class="fab fa-linkedin"></i>
+                                        </a>
+                                        <a href="#" class="text-white hover:text-green-200 text-2xl">
+                                            <i class="fab fa-whatsapp"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-8">
+                                    <h3 class="font-semibold mb-4">Business Hours</h3>
+                                    <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                                    <p>Saturday: 9:00 AM - 1:00 PM</p>
+                                    <p>Sunday: Closed</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-12">
+                        <h2 class="text-2xl font-semibold mb-6 text-center">Our Location</h2>
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden h-64">
+                            <div class="h-full w-full bg-gray-200 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="text-4xl text-primary mb-2">
+                                        <i class="fas fa-map-marked-alt"></i>
+                                    </div>
+                                    <p class="text-gray-700">V.V.Nagar, Anand, Gujarat, India</p>
+                                    <button class="mt-4 btn-outline px-4 py-2 rounded-md text-sm font-medium">
+                                        <i class="fas fa-directions mr-2"></i> Get Directions
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12 right-0 bottom-0 w-full">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <!-- <svg class="h-8 w-8 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"></path>
+                        </svg>
+                        <span class="ml-2 text-xl font-bold">GreenTree</span> -->
+                        <img src="LOGO.png" class="h-10" alt="">
+                    </div>
+                    <p class="text-gray-400 mb-4">Powering Businesses with Custom ERP, Web &amp; Mobile Solutions</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white nav-link" data-page="home">Home</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white nav-link" data-page="about">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white nav-link" data-page="services">Services</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white nav-link" data-page="portfolio">Portfolio</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white nav-link" data-page="contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white services-btn">ERP Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white services-btn">Website Design</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white services-btn">Mobile App Development</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white services-btn">Custom Software</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact Info</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2"></i>
+                            <span>V.V.Nagar, Anand, Gujarat</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-envelope mt-1 mr-2"></i>
+                            <span>info@greentree.com</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-phone mt-1 mr-2"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fab fa-whatsapp mt-1 mr-2"></i>
+                            <span>+91 98765 43210</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-400">© 2023 GreenTree. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Page navigation
+        const navLinks = document.querySelectorAll('.nav-link');
+        const pages = document.querySelectorAll('.page');
+        
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const targetPage = link.getAttribute('data-page');
+                
+                // Hide all pages
+                pages.forEach(page => {
+                    page.classList.remove('active');
+                });
+                
+                // Show target page
+                document.getElementById(targetPage).classList.add('active');
+                
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+            });
+        });
+        
+        // Services button navigation
+        const servicesBtns = document.querySelectorAll('.services-btn');
+        servicesBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Hide all pages
+                pages.forEach(page => {
+                    page.classList.remove('active');
+                });
+                
+                // Show services page
+                document.getElementById('services').classList.add('active');
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+            });
+        });
+        
+        // Contact button navigation
+        const contactBtns = document.querySelectorAll('.contact-btn');
+        contactBtns.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Hide all pages
+                pages.forEach(page => {
+                    page.classList.remove('active');
+                });
+                
+                // Show contact page
+                document.getElementById('contact').classList.add('active');
+                
+                // Scroll to top
+                window.scrollTo(0, 0);
+            });
+        });
+        
+        // Contact form submission
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // In a real application, you would send this data to your server
+            // For demo purposes, we'll just show an alert
+            alert(`Thank you, ${name}! Your message has been received. We'll get back to you soon.`);
+            
+            // Reset form
+            contactForm.reset();
+        });
+        const numLeaves = 100;
+    const emojis = [ '🌸', '🍁','🍀', '🌿','🌼','🏵️'];
+
+    for (let i = 0; i < numLeaves; i++) {
+      const container = document.createElement('div');
+      container.className = 'leaf-container';
+
+      const inner = document.createElement('div');
+      inner.className = 'leaf-inner';
+
+      const leaf = document.createElement('div');
+      leaf.className = 'leaf';
+      leaf.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+
+      const size = Math.random() * 20 + 20; // 20-40px
+      const left = Math.random() * window.innerWidth;
+
+      // Set styles and durations
+      container.style.left = `${left}px`;
+      container.style.animationDuration = `${Math.random() * 10 + 5}s`;
+      inner.style.animationDuration = `${Math.random() * 5 + 2}s`;
+      leaf.style.animationDuration = `${Math.random() * 4 + 3}s`;
+      leaf.style.fontSize = `${size}px`;
+
+      inner.appendChild(leaf);
+      container.appendChild(inner);
+      document.body.appendChild(container);
+    }
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'939f0274867ea73a',t:'MTc0NjI2NzQ1Ny4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border: medium; visibility: hidden;"></iframe>
+</body></html>
