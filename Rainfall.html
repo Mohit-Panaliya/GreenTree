@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Leaf Rain Fixed</title>
+  <style>
+    body {
+      margin: 0;
+      /* overflow: hidden */
+      background: #E6F4EA;
+      height:500vh;
+    }
+
+    .leaf-container {
+      position: absolute;
+      top: -50px;
+      animation: fall linear infinite;
+    }
+
+    .leaf-inner {
+      animation: sway ease-in-out infinite alternate;
+    }
+
+    .leaf {
+      font-size: 24px;
+      animation: spin linear infinite;
+      display: inline-block;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(0px); }
+      100% { transform: translateY(500vh); }
+    }
+
+    @keyframes sway {
+      0% { transform: translateX(0px); }
+      50% { transform: translateX(20px); }
+      100% { transform: translateX(-20px); }
+    }
+
+    @keyframes spin {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+<body>
+  <script>
+    const numLeaves = 100;
+    const emojis = [ '🌸', '🍁','🍀', '🌿','🌼','🏵️'];
+
+    for (let i = 0; i < numLeaves; i++) {
+      const container = document.createElement('div');
+      container.className = 'leaf-container';
+
+      const inner = document.createElement('div');
+      inner.className = 'leaf-inner';
+
+      const leaf = document.createElement('div');
+      leaf.className = 'leaf';
+      leaf.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+
+      const size = Math.random() * 20 + 20; // 20-40px
+      const left = Math.random() * window.innerWidth;
+
+      // Set styles and durations
+      container.style.left = `${left}px`;
+      container.style.animationDuration = `${Math.random() * 10 + 5}s`;
+      inner.style.animationDuration = `${Math.random() * 5 + 2}s`;
+      leaf.style.animationDuration = `${Math.random() * 4 + 3}s`;
+      leaf.style.fontSize = `${size}px`;
+
+      inner.appendChild(leaf);
+      container.appendChild(inner);
+      document.body.appendChild(container);
+    }
+  </script>
+</body>
+</html>
